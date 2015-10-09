@@ -1,0 +1,18 @@
+//
+//  PrefixHeader.pch
+//  CarPriceB117
+//
+//  Created by 聪 on 15/10/10.
+//  Copyright (c) 2015年 B117. All rights reserved.
+//
+
+#ifndef CarPriceB117_PrefixHeader_pch
+#define CarPriceB117_PrefixHeader_pch
+
+// 颜色
+#define PCARGBColor(a, r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:(a)/255.0]
+#define PCColor(r, g, b)  PCARGBColor(255, (r), (g), (b))
+#define PCRandomColor PCColor(arc4random_uniform(255), arc4random_uniform(255), arc4random_uniform(255));
+
+
+#endif
