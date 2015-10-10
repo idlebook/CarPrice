@@ -19,7 +19,7 @@
     // 设置整个项目导航栏的item的主题样式
     UINavigationBar *bar = [UINavigationBar appearance];
    
-    [bar setBackgroundImage:[UIImage imageNamed:@"anniu"] forBarMetrics:UIBarMetricsDefault];
+    [bar setBarTintColor:PCColor(228, 74, 5)];
     
 }
 
@@ -28,4 +28,8 @@
     // Do any additional setup after loading the view.
 }
 
+- (UIStatusBarStyle)preferredStatusBarStyle
+{
+    return UIStatusBarStyleLightContent;
+}
 @end

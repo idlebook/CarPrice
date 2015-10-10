@@ -19,6 +19,10 @@
 		CB9B54911BC8342A009AB56F /* PCSaleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB9B547E1BC8342A009AB56F /* PCSaleViewController.m */; };
 		CB9B54921BC8342A009AB56F /* PCSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB9B54821BC8342A009AB56F /* PCSearchViewController.m */; };
 		CB9B54931BC8342A009AB56F /* PCToolsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB9B54861BC8342A009AB56F /* PCToolsViewController.m */; };
+		CB9B54981BC8A1FE009AB56F /* PCPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = CB9B54971BC8A1FE009AB56F /* PCPageControl.m */; };
+		CB9B54A21BC8A930009AB56F /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = CB9B54A11BC8A930009AB56F /* UIView+Extension.m */; };
+		CB9B54BE1BC8D454009AB56F /* PCCarHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = CB9B54BD1BC8D454009AB56F /* PCCarHeader.m */; };
+		CB9B54C21BC8D8FF009AB56F /* PCCarHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB9B54C11BC8D8FF009AB56F /* PCCarHeader.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +62,13 @@
 		CB9B54821BC8342A009AB56F /* PCSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCSearchViewController.m; sourceTree = "<group>"; };
 		CB9B54851BC8342A009AB56F /* PCToolsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCToolsViewController.h; sourceTree = "<group>"; };
 		CB9B54861BC8342A009AB56F /* PCToolsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCToolsViewController.m; sourceTree = "<group>"; };
+		CB9B54961BC8A1FE009AB56F /* PCPageControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCPageControl.h; sourceTree = "<group>"; };
+		CB9B54971BC8A1FE009AB56F /* PCPageControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCPageControl.m; sourceTree = "<group>"; };
+		CB9B54A01BC8A930009AB56F /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
+		CB9B54A11BC8A930009AB56F /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
+		CB9B54BC1BC8D454009AB56F /* PCCarHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCCarHeader.h; sourceTree = "<group>"; };
+		CB9B54BD1BC8D454009AB56F /* PCCarHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCCarHeader.m; sourceTree = "<group>"; };
+		CB9B54C11BC8D8FF009AB56F /* PCCarHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PCCarHeader.xib; sourceTree = "<group>"; };
 		F52F6F57272D52ADBD2C08C0 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -168,6 +179,7 @@
 		CB9B545F1BC8342A009AB56F /* Other-其他 */ = {
 			isa = PBXGroup;
 			children = (
+				CB9B549F1BC8A913009AB56F /* Category */,
 				CB9B54621BC8342A009AB56F /* Controller */,
 				CB9B54601BC8342A009AB56F /* AppDelegate.h */,
 				CB9B54611BC8342A009AB56F /* AppDelegate.m */,
@@ -191,6 +203,7 @@
 		CB9B54691BC8342A009AB56F /* tabCar-车型 */ = {
 			isa = PBXGroup;
 			children = (
+				CB9B54941BC8A102009AB56F /* View */,
 				CB9B546A1BC8342A009AB56F /* Controller */,
 			);
 			path = "tabCar-车型";
@@ -271,6 +284,27 @@
 				CB9B54861BC8342A009AB56F /* PCToolsViewController.m */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		CB9B54941BC8A102009AB56F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CB9B54961BC8A1FE009AB56F /* PCPageControl.h */,
+				CB9B54971BC8A1FE009AB56F /* PCPageControl.m */,
+				CB9B54BC1BC8D454009AB56F /* PCCarHeader.h */,
+				CB9B54BD1BC8D454009AB56F /* PCCarHeader.m */,
+				CB9B54C11BC8D8FF009AB56F /* PCCarHeader.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CB9B549F1BC8A913009AB56F /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				CB9B54A01BC8A930009AB56F /* UIView+Extension.h */,
+				CB9B54A11BC8A930009AB56F /* UIView+Extension.m */,
+			);
+			path = Category;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -357,6 +391,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CB9B53EB1BC817FF009AB56F /* Images.xcassets in Resources */,
+				CB9B54C21BC8D8FF009AB56F /* PCCarHeader.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -409,6 +444,8 @@
 			files = (
 				CB9B54881BC8342A009AB56F /* PCNavgationController.m in Sources */,
 				CB9B54921BC8342A009AB56F /* PCSearchViewController.m in Sources */,
+				CB9B54BE1BC8D454009AB56F /* PCCarHeader.m in Sources */,
+				CB9B54A21BC8A930009AB56F /* UIView+Extension.m in Sources */,
 				CB9B54891BC8342A009AB56F /* PCTabBarController.m in Sources */,
 				CB9B548C1BC8342A009AB56F /* PCMoreViewController.m in Sources */,
 				CB9B54911BC8342A009AB56F /* PCSaleViewController.m in Sources */,
@@ -416,6 +453,7 @@
 				CB9B54871BC8342A009AB56F /* AppDelegate.m in Sources */,
 				CB9B548B1BC8342A009AB56F /* PCCarViewController.m in Sources */,
 				CB9B54931BC8342A009AB56F /* PCToolsViewController.m in Sources */,
+				CB9B54981BC8A1FE009AB56F /* PCPageControl.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
