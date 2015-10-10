@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		0B2A367689956FE773C40821 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F52F6F57272D52ADBD2C08C0 /* libPods.a */; };
+		37205A8C1BC9647500CD86A8 /* PCSaleChangeAreaController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37205A891BC9647500CD86A8 /* PCSaleChangeAreaController.m */; };
+		37205A8D1BC9647500CD86A8 /* PCSaleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37205A8B1BC9647500CD86A8 /* PCSaleViewController.m */; };
+		37205A931BC964D500CD86A8 /* PCSaleViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 37205A911BC964D500CD86A8 /* PCSaleViewCell.m */; };
+		37205A941BC964D500CD86A8 /* PCSaleViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37205A921BC964D500CD86A8 /* PCSaleViewCell.xib */; };
 		CB9B53E11BC81576009AB56F /* CarPriceB117Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = CB9B53E01BC81576009AB56F /* CarPriceB117Tests.m */; };
 		CB9B53EB1BC817FF009AB56F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB9B53EA1BC817FF009AB56F /* Images.xcassets */; };
 		CB9B54871BC8342A009AB56F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CB9B54611BC8342A009AB56F /* AppDelegate.m */; };
@@ -16,7 +20,6 @@
 		CB9B548A1BC8342A009AB56F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CB9B54671BC8342A009AB56F /* main.m */; };
 		CB9B548B1BC8342A009AB56F /* PCCarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB9B546C1BC8342A009AB56F /* PCCarViewController.m */; };
 		CB9B548C1BC8342A009AB56F /* PCMoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB9B54701BC8342A009AB56F /* PCMoreViewController.m */; };
-		CB9B54911BC8342A009AB56F /* PCSaleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB9B547E1BC8342A009AB56F /* PCSaleViewController.m */; };
 		CB9B54921BC8342A009AB56F /* PCSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB9B54821BC8342A009AB56F /* PCSearchViewController.m */; };
 		CB9B54931BC8342A009AB56F /* PCToolsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB9B54861BC8342A009AB56F /* PCToolsViewController.m */; };
 		CB9B54981BC8A1FE009AB56F /* PCPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = CB9B54971BC8A1FE009AB56F /* PCPageControl.m */; };
@@ -44,6 +47,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		37205A881BC9647500CD86A8 /* PCSaleChangeAreaController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCSaleChangeAreaController.h; sourceTree = "<group>"; };
+		37205A891BC9647500CD86A8 /* PCSaleChangeAreaController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCSaleChangeAreaController.m; sourceTree = "<group>"; };
+		37205A8A1BC9647500CD86A8 /* PCSaleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCSaleViewController.h; sourceTree = "<group>"; };
+		37205A8B1BC9647500CD86A8 /* PCSaleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCSaleViewController.m; sourceTree = "<group>"; };
+		37205A901BC964D500CD86A8 /* PCSaleViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCSaleViewCell.h; sourceTree = "<group>"; };
+		37205A911BC964D500CD86A8 /* PCSaleViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCSaleViewCell.m; sourceTree = "<group>"; };
+		37205A921BC964D500CD86A8 /* PCSaleViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PCSaleViewCell.xib; sourceTree = "<group>"; };
 		69583F7B3A76648CB3B585F3 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		9457BA43ABA0ACA03666A982 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		CB9B53C11BC81576009AB56F /* CarPriceB117.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarPriceB117.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -64,8 +74,6 @@
 		CB9B546C1BC8342A009AB56F /* PCCarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCCarViewController.m; sourceTree = "<group>"; };
 		CB9B546F1BC8342A009AB56F /* PCMoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCMoreViewController.h; sourceTree = "<group>"; };
 		CB9B54701BC8342A009AB56F /* PCMoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCMoreViewController.m; sourceTree = "<group>"; };
-		CB9B547D1BC8342A009AB56F /* PCSaleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCSaleViewController.h; sourceTree = "<group>"; };
-		CB9B547E1BC8342A009AB56F /* PCSaleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCSaleViewController.m; sourceTree = "<group>"; };
 		CB9B54811BC8342A009AB56F /* PCSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCSearchViewController.h; sourceTree = "<group>"; };
 		CB9B54821BC8342A009AB56F /* PCSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCSearchViewController.m; sourceTree = "<group>"; };
 		CB9B54851BC8342A009AB56F /* PCToolsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCToolsViewController.h; sourceTree = "<group>"; };
@@ -113,6 +121,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		37205A8E1BC964B700CD86A8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				37205A901BC964D500CD86A8 /* PCSaleViewCell.h */,
+				37205A911BC964D500CD86A8 /* PCSaleViewCell.m */,
+				37205A921BC964D500CD86A8 /* PCSaleViewCell.xib */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		37205A8F1BC964C300CD86A8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		996F9513598D0C7EF270FA2F /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -263,6 +288,8 @@
 		CB9B547B1BC8342A009AB56F /* tabSale-降价 */ = {
 			isa = PBXGroup;
 			children = (
+				37205A8F1BC964C300CD86A8 /* Model */,
+				37205A8E1BC964B700CD86A8 /* View */,
 				CB9B547C1BC8342A009AB56F /* Controller */,
 			);
 			path = "tabSale-降价";
@@ -271,8 +298,10 @@
 		CB9B547C1BC8342A009AB56F /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				CB9B547D1BC8342A009AB56F /* PCSaleViewController.h */,
-				CB9B547E1BC8342A009AB56F /* PCSaleViewController.m */,
+				37205A8A1BC9647500CD86A8 /* PCSaleViewController.h */,
+				37205A8B1BC9647500CD86A8 /* PCSaleViewController.m */,
+				37205A881BC9647500CD86A8 /* PCSaleChangeAreaController.h */,
+				37205A891BC9647500CD86A8 /* PCSaleChangeAreaController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -453,6 +482,7 @@
 				CB9B53EB1BC817FF009AB56F /* Images.xcassets in Resources */,
 				CB9B54DB1BC92A66009AB56F /* cars.plist in Resources */,
 				CB9B54D91BC90AA5009AB56F /* PCCarCell.xib in Resources */,
+				37205A941BC964D500CD86A8 /* PCSaleViewCell.xib in Resources */,
 				CB9B54C21BC8D8FF009AB56F /* PCCarHeader.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -506,16 +536,18 @@
 			files = (
 				CB9B54881BC8342A009AB56F /* PCNavgationController.m in Sources */,
 				CB9B54921BC8342A009AB56F /* PCSearchViewController.m in Sources */,
+				37205A931BC964D500CD86A8 /* PCSaleViewCell.m in Sources */,
+				37205A8D1BC9647500CD86A8 /* PCSaleViewController.m in Sources */,
 				CB9B54BE1BC8D454009AB56F /* PCCarHeader.m in Sources */,
 				CB9B54EB1BC931FA009AB56F /* PCCarGroup.m in Sources */,
 				CB9B54A21BC8A930009AB56F /* UIView+Extension.m in Sources */,
 				CB9B54891BC8342A009AB56F /* PCTabBarController.m in Sources */,
 				CB9B54C81BC8E47B009AB56F /* PCCarHeaderButton.m in Sources */,
 				CB9B548C1BC8342A009AB56F /* PCMoreViewController.m in Sources */,
+				37205A8C1BC9647500CD86A8 /* PCSaleChangeAreaController.m in Sources */,
 				CB9B54CC1BC8F3B7009AB56F /* PCCar.m in Sources */,
 				CB9B54EC1BC931FA009AB56F /* PCCCar.m in Sources */,
 				CB9B54D41BC8F97F009AB56F /* PCNetworkTools.m in Sources */,
-				CB9B54911BC8342A009AB56F /* PCSaleViewController.m in Sources */,
 				CB9B548A1BC8342A009AB56F /* main.m in Sources */,
 				CB9B54871BC8342A009AB56F /* AppDelegate.m in Sources */,
 				CB9B548B1BC8342A009AB56F /* PCCarViewController.m in Sources */,
