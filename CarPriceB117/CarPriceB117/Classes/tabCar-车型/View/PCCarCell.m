@@ -9,6 +9,7 @@
 #import "PCCarCell.h"
 #import <SDWebImage/UIImageView+WebCache.h>
 #import "PCCar.h"
+#import "PCCCar.h"
 
 @interface PCCarCell ()
 @property (weak, nonatomic) IBOutlet UIImageView *imageV;
@@ -18,11 +19,18 @@
 
 @implementation PCCarCell
 
-- (void)setCar:(PCCar *)car
+//- (void)setCar:(PCCar *)car
+//{
+//    _car = car;
+//    self.brandLabel.text = car.brandName;
+//    [self.imageV sd_setImageWithURL:[NSURL URLWithString:car.imageSrc] placeholderImage:[UIImage imageNamed:@"defaultHead"]];
+//}
+
+- (void)setCar:(PCCCar *)car
 {
     _car = car;
-    self.brandLabel.text = car.brandName;
-    [self.imageV sd_setImageWithURL:[NSURL URLWithString:car.imageSrc] placeholderImage:[UIImage imageNamed:@"defaultHead"]];
+    self.imageV.image = [UIImage imageNamed:car.icon];
+    self.brandLabel.text = car.name;
 }
 
 @end

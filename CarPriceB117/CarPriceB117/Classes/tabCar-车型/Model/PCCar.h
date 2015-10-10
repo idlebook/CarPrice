@@ -12,4 +12,6 @@
 @property (nonatomic, copy) NSString *brandName; /**< 车名 */
 @property (nonatomic, copy) NSString *imageSrc; /**< 车图 */
 
+
+
 @end

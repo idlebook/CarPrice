@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@class PCCar;
+//@class PCCar;
+@class PCCCar;
 @interface PCCarCell : UITableViewCell
-@property (nonatomic, strong) PCCar *car; /**< 车模 */
-
+//@property (nonatomic, strong) PCCar *car; /**< 车模 */
+@property (nonatomic, strong) PCCCar *car; /**< Test车模 */
 @end

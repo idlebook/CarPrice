@@ -15,10 +15,13 @@
 #import <SDWebImage/UIImageView+WebCache.h>
 #import "PCCar.h"
 #import "PCCarCell.h"
+#import "PCCCar.h"
+#import "PCCarGroup.h"
 
 @interface PCCarViewController ()
-@property (nonatomic, strong) NSMutableArray *cars; /**< 汽车 */
+@property (nonatomic, strong) NSMutableArray *carss; /**< 汽车 */
 @property (nonatomic, weak) PCNetworkTools *manager; /**< 请求管理者 */
+@property (nonatomic, strong) NSMutableArray *carGroup; /**< plist测试数据 */
 @end
 
 @implementation PCCarViewController
@@ -36,21 +39,30 @@ static NSString *const PCCarCellId = @"PCCarCell";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([PCCarCell class]) bundle:nil] forCellReuseIdentifier:PCCarCellId];
-    self.tableView.rowHeight = 60;
-    
-    
     [self setupPageControl];
    
+    [self setupTable];
+    
     [self setupRefresh];
 }
 
 #pragma mark - 初始化
+- (void)setupTable
+{
+    self.tableView.sectionIndexColor = [UIColor darkGrayColor];
+    self.tableView.sectionIndexBackgroundColor = [UIColor clearColor];
+    self.tableView.rowHeight = 60;
+    [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([PCCarCell class]) bundle:nil] forCellReuseIdentifier:PCCarCellId];
+}
+
 - (void)setupPageControl
 {
     PCCarHeader *carHeader = [PCCarHeader carHeader];
-    
-    self.tableView.tableHeaderView = carHeader;
+    UIView *vc = [[UIView alloc] init];
+    vc.width = carHeader.width;
+    vc.height = carHeader.height;
+    [vc addSubview:carHeader];
+    self.tableView.tableHeaderView = vc;
 }
 
 
@@ -71,7 +83,7 @@ static NSString *const PCCarCellId = @"PCCarCell";
     PCWeakSelf;
     [self.manager GET:@"brand/list" parameters:@{@"key" : @"4a77895cf28871e6892b3fb556dc2705"} success:^(NSURLSessionDataTask *task , id responseObject ) {
         // 字典转模型
-        weakSelf.cars = [PCCar objectArrayWithKeyValuesArray:responseObject[@"result"]];
+        weakSelf.carss = [PCCar objectArrayWithKeyValuesArray:responseObject[@"result"]];
         
         // 刷新表格
         [weakSelf.tableView reloadData];
@@ -93,19 +105,38 @@ static NSString *const PCCarCellId = @"PCCarCell";
     }];
 }
 
+#pragma mark - 网络请求数据不合规,由本地加载
+- (NSMutableArray *)carGroup
+{
+    if (!_carGroup) {
+        [PCCarGroup setupObjectClassInArray:^NSDictionary *{
+            return @{@"cars" : @"PCCCar"};
+        }];
+        _carGroup = [PCCarGroup objectArrayWithFilename:@"cars.plist"];
+    }
+    
+    return _carGroup;
+}
 
 #pragma mark -tableViewDatasource
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return self.carGroup.count;
+}
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-
-    return self.cars.count;
+    PCCarGroup *group = self.carGroup[section];
+    
+    return group.cars.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     PCCarCell *cell = [tableView dequeueReusableCellWithIdentifier:PCCarCellId];
     
-    PCCar *car = self.cars[indexPath.row];
+    PCCarGroup *group = self.carGroup[indexPath.section];
+    PCCCar *car = group.cars[indexPath.row];
     cell.car = car;
 
     return cell;
@@ -114,11 +145,18 @@ static NSString *const PCCarCellId = @"PCCarCell";
 #pragma mark - tableViewDelegate
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 {
-    return @"A";
+    PCCarGroup *group = self.carGroup[section];
+    return group.title;
 }
 
 - (NSArray *)sectionIndexTitlesForTableView:(UITableView *)tableView
 {
-    return @[@"A",@"B",@"C",@"D",@"E",@"F",@"G",@"H",@"I"];
+    return [self.carGroup valueForKey:@"title"];
+}
+
+#warning 跳转每个cell的界面,待完成
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    PCLogFunc;
 }
 @end
