@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7702" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="100" id="KGk-i7-Jjw" customClass="PCSaleViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="408" height="100"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wbV-aR-aFy" userLabel="topView">
+                        <rect key="frame" x="0.0" y="0.0" width="408" height="60"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zgt-q3-EFK">
+                                <rect key="frame" x="16" y="8" width="123" height="28"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c2e-Xo-Jw7">
+                                <rect key="frame" x="16" y="44" width="123" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="60" id="VrW-kd-0o5"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2zK-Tu-44E" userLabel="bottomView">
+                        <rect key="frame" x="0.0" y="60" width="408" height="39"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gse-NE-gKV">
+                                <rect key="frame" x="0.0" y="0.0" width="204" height="39"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <inset key="titleEdgeInsets" minX="-11" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <inset key="imageEdgeInsets" minX="-18" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="400电话" image="ord_phone">
+                                    <color key="titleColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VPw-Qg-Sp4">
+                                <rect key="frame" x="204" y="0.0" width="204" height="39"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <inset key="titleEdgeInsets" minX="-11" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <inset key="imageEdgeInsets" minX="-18" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="询问底价" image="ord_xinfeng">
+                                    <color key="titleColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="Gse-NE-gKV" secondAttribute="width" multiplier="2" id="AET-Tk-0aR"/>
+                            <constraint firstAttribute="bottom" secondItem="VPw-Qg-Sp4" secondAttribute="bottom" id="AJs-Fn-tDY"/>
+                            <constraint firstItem="Gse-NE-gKV" firstAttribute="leading" secondItem="2zK-Tu-44E" secondAttribute="leading" id="EEP-MA-KUN"/>
+                            <constraint firstAttribute="trailing" secondItem="VPw-Qg-Sp4" secondAttribute="trailing" id="JhD-L6-UaT"/>
+                            <constraint firstItem="VPw-Qg-Sp4" firstAttribute="width" secondItem="Gse-NE-gKV" secondAttribute="width" id="OAH-oT-drF"/>
+                            <constraint firstItem="Gse-NE-gKV" firstAttribute="top" secondItem="2zK-Tu-44E" secondAttribute="top" id="PgK-uN-bY2"/>
+                            <constraint firstAttribute="height" secondItem="Gse-NE-gKV" secondAttribute="height" id="e3B-Pn-VgR"/>
+                            <constraint firstItem="VPw-Qg-Sp4" firstAttribute="top" secondItem="2zK-Tu-44E" secondAttribute="top" id="nQS-t3-hE0"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="2zK-Tu-44E" secondAttribute="bottom" id="0qP-pp-OSC"/>
+                    <constraint firstItem="wbV-aR-aFy" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="LWl-or-IF7"/>
+                    <constraint firstItem="wbV-aR-aFy" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Syi-BT-MD3"/>
+                    <constraint firstAttribute="trailing" secondItem="wbV-aR-aFy" secondAttribute="trailing" id="azr-or-aLG"/>
+                    <constraint firstItem="2zK-Tu-44E" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="kfY-va-sDN"/>
+                    <constraint firstItem="2zK-Tu-44E" firstAttribute="top" secondItem="wbV-aR-aFy" secondAttribute="bottom" id="odT-j9-ido"/>
+                    <constraint firstAttribute="trailing" secondItem="2zK-Tu-44E" secondAttribute="trailing" id="tWt-nK-y3H"/>
+                </constraints>
+            </tableViewCellContentView>
+            <point key="canvasLocation" x="289" y="355"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="ord_phone" width="20" height="20"/>
+        <image name="ord_xinfeng" width="20" height="20"/>
+    </resources>
+</document>

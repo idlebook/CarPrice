@@ -1,13 +1,13 @@
 //
-//  PCSaleViewController.h
+//  PCSaleViewCell.h
 //  CarPriceB117
 //
-//  Created by 聪 on 15/10/10.
+//  Created by chenbin on 15/10/10.
 //  Copyright (c) 2015年 B117. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface PCSaleViewController : UIViewController
+@interface PCSaleViewCell : UITableViewCell
 
 @end
