@@ -17,6 +17,7 @@
 // 分类
 #import "UIView+Extension.h"
 
+#import "PCNetworkTools.h"
 
 // 屏幕尺寸
 #define PCScreenH [UIScreen mainScreen].bounds.size.height
@@ -24,11 +25,13 @@
 
 // 日志输出
 #ifdef DEBUG
-#define PCLog(...) PCLog(__VA_ARGS__)
+#define PCLog(...) NSLog(__VA_ARGS__)
 #else
 #define PCLog(...)
 #endif
 
 #define PCLogFunc PCLog(@"%s", __func__)
+
+#define PCWeakSelf __weak typeof(self) weakSelf = self;
 
 #endif

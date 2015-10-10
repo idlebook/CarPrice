@@ -1,5 +1,5 @@
 //
-//  PCCarHeader.h
+//  PCCarHeaderButton.h
 //  CarPriceB117
 //
 //  Created by 聪 on 15/10/10.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PCCarHeader : UIView
-+ (instancetype)carHeader;
+@interface PCCarHeaderButton : UIButton
+
 @end

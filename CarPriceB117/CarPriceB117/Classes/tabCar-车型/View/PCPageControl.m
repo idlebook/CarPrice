@@ -19,16 +19,6 @@
 
 @implementation PCPageControl
 
-- (instancetype)initWithPageControl
-{
-    return [PCPageControl viewFromXib];
-}
-
-+ (instancetype)pageWithControl
-{
-    return [[self alloc] initWithPageControl];
-}
-
 - (void)awakeFromNib
 {
     self.sc.bounces = NO;

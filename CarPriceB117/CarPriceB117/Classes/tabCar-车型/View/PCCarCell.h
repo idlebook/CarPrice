@@ -1,5 +1,5 @@
 //
-//  PCCarHeader.h
+//  PCCarCell.h
 //  CarPriceB117
 //
 //  Created by 聪 on 15/10/10.
@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PCCarHeader : UIView
-+ (instancetype)carHeader;
+@class PCCar;
+@interface PCCarCell : UITableViewCell
+@property (nonatomic, strong) PCCar *car; /**< 车模 */
+
 @end

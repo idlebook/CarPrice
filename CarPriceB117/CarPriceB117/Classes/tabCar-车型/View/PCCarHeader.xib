@@ -8,28 +8,28 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="PCCarHeader">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="167"/>
+            <rect key="frame" x="0.0" y="0.0" width="355" height="196"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qid-7p-Uqj" customClass="PCPageControl">
-                    <rect key="frame" x="0.0" y="0.0" width="320" height="98"/>
+                    <rect key="frame" x="0.0" y="0.0" width="355" height="96"/>
                     <subviews>
                         <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xTb-3z-uQJ">
-                            <rect key="frame" x="0.0" y="0.0" width="320" height="98"/>
+                            <rect key="frame" x="0.0" y="0.0" width="355" height="96"/>
                         </scrollView>
                         <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="5" translatesAutoresizingMaskIntoConstraints="NO" id="ctl-n2-ye7">
-                            <rect key="frame" x="234" y="58" width="71" height="37"/>
+                            <rect key="frame" x="269" y="56" width="71" height="37"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="71" id="G4i-Rt-FLi"/>
                                 <constraint firstAttribute="height" constant="37" id="xON-Mk-atL"/>
                             </constraints>
+                            <color key="pageIndicatorTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <color key="currentPageIndicatorTintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         </pageControl>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="bottom" secondItem="xTb-3z-uQJ" secondAttribute="bottom" id="1pY-0U-TY2"/>
-                        <constraint firstAttribute="height" constant="98" id="6tf-BF-IyR"/>
                         <constraint firstItem="xTb-3z-uQJ" firstAttribute="leading" secondItem="qid-7p-Uqj" secondAttribute="leading" id="F6G-bf-am0"/>
                         <constraint firstAttribute="trailing" secondItem="xTb-3z-uQJ" secondAttribute="trailing" id="bHU-tU-obX"/>
                         <constraint firstAttribute="trailing" secondItem="ctl-n2-ye7" secondAttribute="trailing" constant="15" id="cyr-FE-NNC"/>
@@ -41,22 +41,106 @@
                         <outlet property="sc" destination="xTb-3z-uQJ" id="75L-1l-aZC"/>
                     </connections>
                 </view>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Su-sy-80w">
-                    <rect key="frame" x="8" y="122" width="46" height="30"/>
-                    <state key="normal" title="Button">
+                <button opaque="NO" contentMode="left" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AgI-Wc-ykS" customClass="PCCarHeaderButton">
+                    <rect key="frame" x="10" y="106" width="59" height="80"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="80" id="MCJ-Tj-HFk"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <inset key="titleEdgeInsets" minX="0.0" minY="0.0" maxX="10" maxY="0.0"/>
+                    <state key="normal" title="我的收藏" image="brand_collect">
+                        <color key="titleColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TMf-4D-p7p" customClass="PCCarHeaderButton">
+                    <rect key="frame" x="148.5" y="106" width="59" height="80"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="80" id="xDi-np-KXM"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <state key="normal" title="销量排行" image="brand_hot">
+                        <color key="titleColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IrM-Nv-bWb" customClass="PCCarHeaderButton">
+                    <rect key="frame" x="217.5" y="106" width="59.5" height="80"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="80" id="j1g-da-avy"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <state key="normal" title="浏览历史" image="brand_history">
+                        <color key="titleColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qmt-sq-AmS" customClass="PCCarHeaderButton">
+                    <rect key="frame" x="286.5" y="106" width="58.5" height="80"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="80" id="6ci-x9-DpR"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <state key="normal" title="附近经销商" image="brand_nearby">
+                        <color key="titleColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5gv-kG-icf" customClass="PCCarHeaderButton">
+                    <rect key="frame" x="79" y="106" width="59.5" height="80"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="80" id="57Y-C5-yX3"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <state key="normal" title="新车上市" image="brand_newCar">
+                        <color key="titleColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                 </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstAttribute="trailing" secondItem="qmt-sq-AmS" secondAttribute="trailing" constant="10" id="0zY-Kj-NFh"/>
                 <constraint firstAttribute="trailing" secondItem="qid-7p-Uqj" secondAttribute="trailing" id="1kJ-ia-TzZ"/>
+                <constraint firstItem="qmt-sq-AmS" firstAttribute="leading" secondItem="IrM-Nv-bWb" secondAttribute="trailing" constant="10" id="4uD-Sw-XbE"/>
                 <constraint firstItem="qid-7p-Uqj" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Hjw-m7-VUS"/>
+                <constraint firstItem="AgI-Wc-ykS" firstAttribute="width" secondItem="5gv-kG-icf" secondAttribute="width" id="JtZ-3T-r1j"/>
                 <constraint firstItem="qid-7p-Uqj" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="N7r-yE-5oZ"/>
+                <constraint firstItem="IrM-Nv-bWb" firstAttribute="width" secondItem="qmt-sq-AmS" secondAttribute="width" id="VEC-do-fQR"/>
+                <constraint firstAttribute="bottom" secondItem="IrM-Nv-bWb" secondAttribute="bottom" constant="10" id="WBa-NA-mlj"/>
+                <constraint firstItem="AgI-Wc-ykS" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="a3e-Aq-GJk"/>
+                <constraint firstAttribute="bottom" secondItem="5gv-kG-icf" secondAttribute="bottom" constant="10" id="aHp-R1-zZn"/>
+                <constraint firstItem="qmt-sq-AmS" firstAttribute="top" secondItem="qid-7p-Uqj" secondAttribute="bottom" constant="10" id="c0e-az-uAp"/>
+                <constraint firstItem="IrM-Nv-bWb" firstAttribute="leading" secondItem="TMf-4D-p7p" secondAttribute="trailing" constant="10" id="cGa-1U-xOl"/>
+                <constraint firstItem="5gv-kG-icf" firstAttribute="width" secondItem="TMf-4D-p7p" secondAttribute="width" id="cOx-ZC-w7a"/>
+                <constraint firstItem="TMf-4D-p7p" firstAttribute="width" secondItem="IrM-Nv-bWb" secondAttribute="width" id="i2C-n9-kre"/>
+                <constraint firstItem="IrM-Nv-bWb" firstAttribute="leading" secondItem="TMf-4D-p7p" secondAttribute="trailing" constant="8" symbolic="YES" id="i6P-6w-b2o"/>
+                <constraint firstItem="IrM-Nv-bWb" firstAttribute="leading" secondItem="TMf-4D-p7p" secondAttribute="trailing" constant="10" id="m9Q-zA-xds"/>
+                <constraint firstAttribute="bottom" secondItem="AgI-Wc-ykS" secondAttribute="bottom" constant="10" id="nOY-7N-blZ"/>
+                <constraint firstItem="5gv-kG-icf" firstAttribute="leading" secondItem="AgI-Wc-ykS" secondAttribute="trailing" constant="10" id="nkT-FD-zgl"/>
+                <constraint firstAttribute="bottom" secondItem="TMf-4D-p7p" secondAttribute="bottom" constant="10" id="omq-cV-yqY"/>
+                <constraint firstAttribute="bottom" secondItem="qmt-sq-AmS" secondAttribute="bottom" constant="10" id="quI-AU-cRY"/>
+                <constraint firstItem="TMf-4D-p7p" firstAttribute="leading" secondItem="5gv-kG-icf" secondAttribute="trailing" constant="10" id="t0I-jd-H3U"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="264" y="149.5"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="cGa-1U-xOl"/>
+                    <exclude reference="i6P-6w-b2o"/>
+                </mask>
+            </variation>
+            <connections>
+                <outlet property="pageControl" destination="qid-7p-Uqj" id="Lh2-Ui-1Jh"/>
+            </connections>
+            <point key="canvasLocation" x="260.5" y="225"/>
         </view>
     </objects>
+    <resources>
+        <image name="brand_collect" width="156" height="156"/>
+        <image name="brand_history" width="156" height="156"/>
+        <image name="brand_hot" width="156" height="156"/>
+        <image name="brand_nearby" width="40" height="40"/>
+        <image name="brand_newCar" width="156" height="156"/>
+    </resources>
 </document>

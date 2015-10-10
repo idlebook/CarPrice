@@ -12,7 +12,4 @@
 
 @property (nonatomic, strong) NSArray *images; /**< 图片数量 */
 
-- (instancetype)initWithPageControl;
-
-+ (instancetype)pageWithControl;
 @end
