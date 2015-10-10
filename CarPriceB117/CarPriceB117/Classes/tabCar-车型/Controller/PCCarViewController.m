@@ -188,6 +188,10 @@ static NSString *const PCCarCellId = @"PCCarCell";
     return [self.carGroup valueForKey:@"title"];
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
+{
+    return 10;
+}
 #warning 跳转每个cell的界面,待完成
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
