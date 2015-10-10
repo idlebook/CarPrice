@@ -49,6 +49,7 @@ static NSString *const PCCarCellId = @"PCCarCell";
 #pragma mark - 初始化
 - (void)setupTable
 {
+    self.tableView.sectionHeaderHeight = 20;
     self.tableView.sectionIndexColor = [UIColor darkGrayColor];
     self.tableView.sectionIndexBackgroundColor = [UIColor clearColor];
     self.tableView.rowHeight = 60;
@@ -143,11 +144,44 @@ static NSString *const PCCarCellId = @"PCCarCell";
 }
 
 #pragma mark - tableViewDelegate
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
+    UILabel *label = nil;
+    UIView *view = nil;
+    static NSString *ID = @"header";
+    static NSInteger tag = 99;
+    static NSInteger tag1 = 999;
+    UITableViewHeaderFooterView *header = [tableView dequeueReusableHeaderFooterViewWithIdentifier:ID];
+    
+    if (header == nil) { // 缓存池中没有header
+        header = [[UITableViewHeaderFooterView alloc] initWithReuseIdentifier:ID];
+        
+        label = [[UILabel alloc] init];
+        label.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+        label.x = 8;
+        label.tag = tag;
+        header.contentView.backgroundColor = [UIColor whiteColor];
+        
+        [header addSubview:label];
+        
+        view = [[UIView alloc] init];
+        view.frame = CGRectMake(8, 19, PCScreenW, 0.5);
+        view.backgroundColor = [UIColor colorWithRed:160 / 255.0 green:160 / 255.0 blue:160 / 255.0 alpha:0.5];
+        view.tag = tag1;
+        [header addSubview:view];
+
+    } else { // 从缓存池中获取, header本身就有label
+        label = (UILabel *)[header viewWithTag:tag];
+        view = (UIView *)[header viewWithTag:tag];
+    }
+    
     PCCarGroup *group = self.carGroup[section];
-    return group.title;
+    label.text = group.title;
+    label.textColor = [UIColor grayColor];
+    
+    return header;
 }
+
 
 - (NSArray *)sectionIndexTitlesForTableView:(UITableView *)tableView
 {
@@ -159,4 +193,5 @@ static NSString *const PCCarCellId = @"PCCarCell";
 {
     PCLogFunc;
 }
+
 @end

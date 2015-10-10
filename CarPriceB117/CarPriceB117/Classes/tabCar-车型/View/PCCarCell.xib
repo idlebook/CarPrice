@@ -13,13 +13,6 @@
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="k1G-r6-l9Y" id="GvK-14-Kdo">
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bpo-xM-8l1">
-                        <rect key="frame" x="0.0" y="59" width="325" height="1"/>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="1" id="HKV-AA-2gh"/>
-                        </constraints>
-                    </view>
                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="w46-pQ-MEZ">
                         <rect key="frame" x="15" y="13" width="35" height="35"/>
                         <constraints>
@@ -36,10 +29,7 @@
                 </subviews>
                 <constraints>
                     <constraint firstItem="w46-pQ-MEZ" firstAttribute="top" secondItem="ncY-Ln-WPw" secondAttribute="top" constant="-1" id="9gg-wg-ALb"/>
-                    <constraint firstAttribute="bottom" secondItem="bpo-xM-8l1" secondAttribute="bottom" id="A3f-oY-G58"/>
                     <constraint firstItem="w46-pQ-MEZ" firstAttribute="leading" secondItem="GvK-14-Kdo" secondAttribute="leading" constant="15" id="Gyq-a4-H2g"/>
-                    <constraint firstAttribute="trailing" secondItem="bpo-xM-8l1" secondAttribute="trailing" id="Rl1-5c-Z5s"/>
-                    <constraint firstItem="bpo-xM-8l1" firstAttribute="leading" secondItem="GvK-14-Kdo" secondAttribute="leading" id="U4C-Fn-3Ky"/>
                     <constraint firstItem="ncY-Ln-WPw" firstAttribute="leading" secondItem="w46-pQ-MEZ" secondAttribute="trailing" constant="20" id="riY-t0-2fT"/>
                     <constraint firstItem="w46-pQ-MEZ" firstAttribute="bottom" secondItem="ncY-Ln-WPw" secondAttribute="bottom" constant="4.5" id="u4z-5W-g3O"/>
                     <constraint firstItem="w46-pQ-MEZ" firstAttribute="top" secondItem="GvK-14-Kdo" secondAttribute="top" constant="13" id="wYr-jY-fGx"/>
